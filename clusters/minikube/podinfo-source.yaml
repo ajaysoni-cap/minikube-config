@@ -10,7 +10,7 @@ spec:
     branch: master
   url: https://github.com/stefanprodan/podinfo
 patches:
-  - patch: |
+  - patch: |-
       apiVersion: autoscaling/v2beta2
       kind: HorizontalPodAutoscaler
       metadata:

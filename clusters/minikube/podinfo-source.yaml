@@ -10,13 +10,13 @@ spec:
     branch: master
   url: https://github.com/stefanprodan/podinfo
   patches:
-  - patch: |-
-      apiVersion: autoscaling/v2
-      kind: HorizontalPodAutoscaler
-      metadata:
+    - patch: |-
+        apiVersion: autoscaling/v2
+        kind: HorizontalPodAutoscaler
+        metadata:
+          name: podinfo
+        spec:
+          minReplicas: 3
+      target:
         name: podinfo
-      spec:
-        minReplicas: 3
-    target:
-      name: podinfo
-      kind: HorizontalPodAutoscaler
+        kind: HorizontalPodAutoscaler
